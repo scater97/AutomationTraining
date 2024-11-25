@@ -1,0 +1,1 @@
+Captură de ecran din 2024-10-28 la 18.45.15
