@@ -3,6 +3,7 @@ package training;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+import training.pages.HomePage;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -16,23 +17,25 @@ public class PracticeFormTest {
     @Test
     public void navigateFromHomePageToPracticeFormPage(){
         openBrowser();
-        clickOnFormMenu();
-        clickOnPracticeFormSubmenu();
-        scrollDown();
-        fillFirstName();
-        fillLastName();
-        fillMail();
-        fillPhoneNumber();
-        fillGender("Other");
-        selectSubject();
-        scrollDown();
-        fillHobbies("Sports");
-        fillDateOfBirth();
-        addThePictures();
-        fillCurrentAddress();
-        fillTheState();
-        fillTheCity();
-        clickOnSubmitButton();
+        HomePage homePage = new HomePage(driver);
+        homePage.isPageLoaded();
+        homePage.goToDesireMenu("Forms");
+//        clickOnPracticeFormSubmenu();
+//        scrollDown();
+//        fillFirstName();
+//        fillLastName();
+//        fillMail();
+//        fillPhoneNumber();
+//        fillGender("Other");
+//        selectSubject();
+//        scrollDown();
+//        fillHobbies("Sports");
+//        fillDateOfBirth();
+//        addThePictures();
+//        fillCurrentAddress();
+//        fillTheState();
+//        fillTheCity();
+//        clickOnSubmitButton();
 
     }
 
@@ -44,11 +47,11 @@ public class PracticeFormTest {
     }
 
     //Facem o metoda care sa sa faca click meniul Forms
-    public void clickOnFormMenu(){
-        scrollDown();
-        WebElement formsMenuElement = driver.findElement(By.xpath("//h5[text()='Forms']"));
-        formsMenuElement.click();
-    }
+//    public void clickOnFormMenu(){
+//        scrollDown();
+//        WebElement formsMenuElement = driver.findElement(By.xpath("//h5[text()='Forms']"));
+//        formsMenuElement.click();
+//    }
 
     //Facem o metoda cae sa faca scroll in jos pe pagina
     public void scrollDown() {
